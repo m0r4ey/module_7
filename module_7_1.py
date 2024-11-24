@@ -23,7 +23,7 @@ class Shop():
     def add(self, *products):
         for product in products:
             if self.get_products().count(f'{product}') == 0:
-                file = open(self.__file_name, 'w')
+                file = open(self.__file_name, 'a')
                 file.write(f'\n{product}')
                 file.close()
             else:
